@@ -7,6 +7,7 @@ var load_menu = preload("res://source/scenes/menus/serials/load.tscn")
 @onready var button_container_ref: VBoxContainer = $HBoxContainer/MarginContainer/VBoxContainer
 
 func _ready() -> void:
+	$MenuSprites/AnimationPlayer.play("MENU_BOUNCE")
 	Event.connect("reload_main_menu", check_menu_items)
 	
 	if OS.has_feature("JavaScript"):
@@ -14,7 +15,7 @@ func _ready() -> void:
 	
 	check_menu_items()
 	
-	button_container_ref.get_child(0).grab_focus()
+	button_container_ref.get_child(2).grab_focus()
 	
 	GlobalRefs.active_scene = self
 

@@ -1,8 +1,170 @@
-[gd_scene load_steps=4 format=3 uid="uid://smt6ks8tnyxg"]
+[gd_scene load_steps=11 format=3 uid="uid://smt6ks8tnyxg"]
 
 [ext_resource type="Texture2D" uid="uid://cysbys3kvxbh0" path="res://icon.png" id="1"]
 [ext_resource type="Script" path="res://source/scenes/menus/settings/custom_button.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://cf8qbf40d5mdc" path="res://assets/sprites/background1.png" id="2_vwy4j"]
 [ext_resource type="Script" path="res://source/scenes/menus/main_menu/main_menu.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://2efnaq8q5np7" path="res://assets/sprites/cat_browntab.png" id="5_t442b"]
+[ext_resource type="Texture2D" uid="uid://cxe8dpo3o5x2e" path="res://assets/sprites/cat_orangetab.png" id="6_0rh7c"]
+[ext_resource type="Texture2D" uid="uid://c4amrpos04ynf" path="res://assets/sprites/cat_black.png" id="7_c1sf8"]
+
+[sub_resource type="Animation" id="Animation_13khg"]
+resource_name = "MENU_BOUNCE"
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Black:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(540, 155), Vector2(576, 110), Vector2(612, 155), Vector2(576, 110), Vector2(540, 155)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Black:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [-0.174533, 0.174533, -0.174533]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Orange:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(440, 216)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Orange:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [-0.174533, 0.174533, -0.174533]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Brown:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(712, 211)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Brown:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [-0.174533, 0.174533, -0.174533]
+}
+
+[sub_resource type="Animation" id="Animation_0cnue"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Black:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(551, 156)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Black:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Orange:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(440, 216)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Orange:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Brown:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(712, 211)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Brown:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_txjcx"]
+_data = {
+"MENU_BOUNCE": SubResource("Animation_13khg"),
+"RESET": SubResource("Animation_0cnue")
+}
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -14,17 +176,19 @@ grow_vertical = 2
 script = ExtResource("3")
 
 [node name="background" type="TextureRect" parent="."]
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -512.0
-offset_bottom = 512.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.163194
+anchor_top = -0.20679
+anchor_right = 2.05903
+anchor_bottom = 2.01543
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_vwy4j")
+metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = 15
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -33,68 +197,83 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
-offset_right = 1152.0
-offset_bottom = 516.0
+layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 3
 
 [node name="title" type="TextureRect" parent="HBoxContainer/MarginContainer2"]
-offset_top = 226.0
-offset_right = 1152.0
-offset_bottom = 290.0
+visible = false
+layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 6
 texture = ExtResource("1")
 stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
-offset_top = 520.0
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 7
 size_flags_stretch_ratio = 0.2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
-offset_right = 1152.0
-offset_bottom = 128.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="continue" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
 visible = false
+layout_mode = 2
 text = "Continue"
 flat = true
 script = ExtResource("2")
 
 [node name="load" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
 visible = false
+layout_mode = 2
 text = "Load"
 flat = true
 script = ExtResource("2")
 
 [node name="play" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
-offset_right = 1152.0
-offset_bottom = 40.0
+layout_mode = 2
 text = "Play"
 flat = true
 script = ExtResource("2")
 
 [node name="settings" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
-offset_top = 44.0
-offset_right = 1152.0
-offset_bottom = 84.0
+layout_mode = 2
 text = "Settings"
 flat = true
 script = ExtResource("2")
 
 [node name="quit" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
-offset_top = 88.0
-offset_right = 1152.0
-offset_bottom = 128.0
+layout_mode = 2
 text = "Quit"
 flat = true
 script = ExtResource("2")
+
+[node name="MenuSprites" type="Node2D" parent="."]
+scale = Vector2(1.7, 1.7)
+
+[node name="Brown" type="Sprite2D" parent="MenuSprites"]
+position = Vector2(712, 211)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_t442b")
+
+[node name="Orange" type="Sprite2D" parent="MenuSprites"]
+position = Vector2(440, 216)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_0rh7c")
+
+[node name="Black" type="Sprite2D" parent="MenuSprites"]
+position = Vector2(551, 156)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_c1sf8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MenuSprites"]
+libraries = {
+"": SubResource("AnimationLibrary_txjcx")
+}
 
 [connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/load" to="." method="_on_load_pressed"]

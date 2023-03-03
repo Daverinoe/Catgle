@@ -7,16 +7,15 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	$WorldEnvironment.environment.sky_rotation.y += 0.5 * delta
+	pass
 
 
 func save() -> Dictionary:
 	return {
 		name: {
-			"sky_rotation": $WorldEnvironment.environment.sky_rotation.y
 		}
 	}
 
 
 func load_data(incoming_data: Dictionary) -> void:
-	$WorldEnvironment.environment.sky_rotation.y = incoming_data["sky_rotation"]
+	pass

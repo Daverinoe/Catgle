@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ewo76xyb6vgp"]
+
+[ext_resource type="Script" path="res://source/scenes/main/baskets/CatchBasket.gd" id="1_47qa2"]
+[ext_resource type="Texture2D" uid="uid://bvscb1aix4uhe" path="res://assets/sprites/basket.png" id="2_7dfjd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_raod4"]
+size = Vector2(475, 338)
+
+[node name="CatchBasket" type="Area2D"]
+script = ExtResource("1_47qa2")
+
+[node name="BasketSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_7dfjd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 70)
+shape = SubResource("RectangleShape2D_raod4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
